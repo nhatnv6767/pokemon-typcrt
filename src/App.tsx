@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-const printSomething = () => {
+const printSomething: () => void = () => {
     console.log("Hello")
 }
 
