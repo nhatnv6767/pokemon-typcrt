@@ -13,6 +13,12 @@ let student: Name = {
     name: "Not"
 }
 
+let student2: StudentDetail = {
+    name: "NONNN",
+    age: 20,
+    address: "1111"
+}
+
 function App() {
     return (
         <div className="App">
