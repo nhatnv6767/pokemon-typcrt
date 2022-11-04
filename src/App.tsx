@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 
-const printSomething: (age: number) => string[] = (age: number) => {
-    let name: string[] = ["name1", "name2"];
-    return name;
+type Name = {
+    name: string
+}
+let student: Name = {
+    name: "Not"
 }
 
 function App() {
