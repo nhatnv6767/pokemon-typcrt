@@ -4,6 +4,11 @@ import './App.css';
 type Name = {
     name: string
 }
+
+type StudentDetail = Name & {
+    age: number,
+    address: string
+}
 let student: Name = {
     name: "Not"
 }
