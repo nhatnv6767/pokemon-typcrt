@@ -1,20 +1,13 @@
 import React from 'react';
 import './App.css';
 
-
-interface Name2 {
-    name: string;
-}
-
-interface StudentDetail2 {
-    age: number,
-    address: string,
-}
-
-function App() {
+// functional component
+const App: React.FC = () => {
     return (
         <div className="App">
-
+            <div className="container">
+                <header className="pokemon-header">Pokemon</header>
+            </div>
         </div>
     );
 }
