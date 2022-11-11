@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import axios from "axios";
 import PokemonCollection from "./components/PokemonCollection";
+import {Pokemon} from "./interface";
 
 
 interface Pokemons {
