@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import axios from "axios";
+import PokemonCollection from "./components/PokemonCollection";
 
 
 interface Pokemons {
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         <div className="App">
             <div className="container">
                 <header className="pokemon-header">Pokemon</header>
+                <PokemonCollection/>
             </div>
         </div>
     );
