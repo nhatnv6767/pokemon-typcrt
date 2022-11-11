@@ -1,8 +1,12 @@
 import React from 'react';
+import {Pokemon} from "../interface";
 
+interface Props {
+    pokemons: Pokemon[]
+}
 
 const PokemonCollection: React.FC = (props) => {
-    const {pokemon} = props;
+    const {pokemons} = props;
     return (
         <div>
             Pokemon Collection
