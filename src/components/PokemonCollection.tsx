@@ -5,7 +5,7 @@ interface Props {
     pokemons: Pokemon[]
 }
 
-const PokemonCollection: React.FC = (props) => {
+const PokemonCollection: React.FC<Props> = (props) => {
     const {pokemons} = props;
     return (
         <div>
