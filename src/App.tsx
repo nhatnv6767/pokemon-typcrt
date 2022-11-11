@@ -9,13 +9,6 @@ interface Pokemons {
     url: string;
 }
 
-interface Pokemon {
-    id: number;
-    name: string;
-    sprites: {
-        front_default: string;
-    }
-}
 
 // functional component
 const App: React.FC = () => {
