@@ -1,6 +1,8 @@
 import React from 'react';
 
-const PokemonCollection = () => {
+
+const PokemonCollection: React.FC = (props) => {
+    const {pokemon} = props;
     return (
         <div>
             Pokemon Collection

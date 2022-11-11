@@ -35,7 +35,7 @@ const App: React.FC = () => {
         <div className="App">
             <div className="container">
                 <header className="pokemon-header">Pokemon</header>
-                <PokemonCollection/>
+                <PokemonCollection pokemons={pokemons}/>
             </div>
         </div>
     );
