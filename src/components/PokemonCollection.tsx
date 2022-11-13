@@ -9,7 +9,15 @@ const PokemonCollection: React.FC<Props> = (props) => {
     const {pokemons} = props;
     return (
         <div>
-            Pokemon Collection
+            <section className="collection-container">
+                {pokemons.map((pokemon) => {
+                    return (
+                        <div>
+                            {pokemon.name}
+                        </div>
+                    )
+                })}
+            </section>
         </div>
     );
 };
