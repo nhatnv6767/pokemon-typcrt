@@ -14,8 +14,7 @@ const PokemonCollection: React.FC<Props> = (props) => {
                     return (
                         <div>
                             {pokemon.name}
-                            {pokemon.id}
-                            {pokemon.sprites.front_default}
+                            
                         </div>
                     )
                 })}
