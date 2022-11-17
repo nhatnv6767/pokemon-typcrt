@@ -7,10 +7,13 @@ interface Props {
 }
 
 const PokemonList: React.FC<Props> = (props) => {
-
+    const {name, id, image} = props;
     return (
         <div>
-
+            <section className="pokemon-list-container">
+                <p className="pokemon-name"> {name} </p>
+                <img src={image} alt="pokemon"/>
+            </section>
         </div>
     );
 };
