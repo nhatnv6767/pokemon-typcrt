@@ -18,7 +18,7 @@ const PokemonCollection: React.FC<Props> = (props) => {
                                 key={pokemon.id}
                                 name={pokemon.name}
                                 id={pokemon.id}
-                                img={pokemon.sprites.front_default}
+                                image={pokemon.sprites.front_default}
                             />
 
                         </div>
