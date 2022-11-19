@@ -30,6 +30,10 @@ const App: React.FC = () => {
     const nextPage = async () => {
         let res = await axios.get(nextUrl);
         setNextUrl(res.data.next)
+        res.data.results.forEach(async (pokemon: Pokemons) => {
+            const poke = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
+            setPokemons((p) => [...p, poke.data])
+        })
     }
 
     return (
