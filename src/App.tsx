@@ -14,9 +14,11 @@ interface Pokemons {
 // functional component
 const App: React.FC = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+    const [nextUrl, setNextUrl] = useState<string>("")
     useEffect(() => {
         const getPokemon = async () => {
             const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20&offset=20")
+            console.log(res.data)
             res.data.results.forEach(async (pokemon: Pokemons) => {
                 const poke = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
                 setPokemons((p) => [...p, poke.data])
