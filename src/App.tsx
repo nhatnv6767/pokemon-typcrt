@@ -27,11 +27,19 @@ const App: React.FC = () => {
         getPokemon()
     }, [])
 
+    const nextPage = async () => {
+        let res = await axios.get(nextUrl);
+        setNextUrl(res.data.next)
+    }
+
     return (
         <div className="App">
             <div className="container">
                 <header className="pokemon-header">Pokemon</header>
                 <PokemonCollection pokemons={pokemons}/>
+                <div className="btn">
+                    <button onClick={nextPage}> Load more</button>
+                </div>
             </div>
         </div>
     );
