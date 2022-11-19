@@ -1,4 +1,5 @@
 import React from 'react';
+import "./pokemon.css"
 
 interface Props {
     name: string,
