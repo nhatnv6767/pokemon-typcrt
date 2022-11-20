@@ -15,6 +15,7 @@ interface Pokemons {
 const App: React.FC = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
     const [nextUrl, setNextUrl] = useState<string>("")
+    const [loading, setLoading] = useState<boolean>(true)
     useEffect(() => {
         const getPokemon = async () => {
             const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20&offset=20")
@@ -22,6 +23,7 @@ const App: React.FC = () => {
             res.data.results.forEach(async (pokemon: Pokemons) => {
                 const poke = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
                 setPokemons((p) => [...p, poke.data])
+                setLoading(false)
             })
         }
         getPokemon()
