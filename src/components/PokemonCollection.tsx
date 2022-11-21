@@ -11,7 +11,7 @@ interface Props {
 }
 
 const PokemonCollection: React.FC<Props> = (props) => {
-    const {pokemons} = props;
+    const {pokemons, viewDetail, setDetail} = props;
     return (
         <div>
             <section className="collection-container">
