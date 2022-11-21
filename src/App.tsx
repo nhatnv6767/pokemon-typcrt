@@ -10,7 +10,7 @@ interface Pokemons {
     url: string;
 }
 
-interface Detail {
+export interface Detail {
     id: number;
     isOpened: boolean;
 }

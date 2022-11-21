@@ -2,9 +2,12 @@ import React from 'react';
 import {Pokemon} from "../interface";
 import PokemonList from "./PokemonList";
 import "./pokemon.css"
+import {Detail} from "../App";
 
 interface Props {
-    pokemons: Pokemon[]
+    pokemons: Pokemon[];
+    viewDetail: Detail;
+    setDetail: React.Dispatch<React.SetStateAction<Detail>>;
 }
 
 const PokemonCollection: React.FC<Props> = (props) => {
