@@ -46,7 +46,7 @@ const App: React.FC = () => {
                 <header className="pokemon-header">Pokemon</header>
                 <PokemonCollection pokemons={pokemons}/>
                 <div className="btn">
-                    <button onClick={nextPage}> Load more</button>
+                    <button onClick={nextPage}> {loading ? "Loading..." : "Load more"}</button>
                 </div>
             </div>
         </div>
