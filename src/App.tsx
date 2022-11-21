@@ -10,12 +10,20 @@ interface Pokemons {
     url: string;
 }
 
+interface Detail {
+    id: number;
+    isOpened: boolean;
+}
 
 // functional component
 const App: React.FC = () => {
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
     const [nextUrl, setNextUrl] = useState<string>("")
     const [loading, setLoading] = useState<boolean>(true)
+    const [viewDetail, setDetail] = useState({
+        id: 0,
+        isOpened: false,
+    })
     useEffect(() => {
         const getPokemon = async () => {
             const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20&offset=20")
