@@ -12,12 +12,15 @@ interface Props {
 
 const PokemonCollection: React.FC<Props> = (props) => {
     const {pokemons, viewDetail, setDetail} = props;
+    const selectPokemon = (id: number) => {
+        console.log(id)
+    }
     return (
         <div>
             <section className="collection-container">
                 {pokemons.map((pokemon) => {
                     return (
-                        <div>
+                        <div onClick={() => selectPokemon(pokemon.id)}>
                             <PokemonList
                                 key={pokemon.id}
                                 name={pokemon.name}
