@@ -18,6 +18,9 @@ const PokemonList: React.FC<Props> = (props) => {
             <section className="pokemon-list-container">
                 <p className="pokemon-name"> {name} </p>
                 <img src={image} alt="pokemon"/>
+                <div className="detail-skill">
+                    <p className="detail-ability"> Abilities:</p>
+                </div>
             </section>
         </div>
     );
