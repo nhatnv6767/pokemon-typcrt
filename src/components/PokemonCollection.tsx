@@ -1,11 +1,11 @@
 import React from 'react';
-import {Pokemon} from "../interface";
+import {Pokemon, PokemonDetail} from "../interface";
 import PokemonList from "./PokemonList";
 import "./pokemon.css"
 import {Detail} from "../App";
 
 interface Props {
-    pokemons: Pokemon[];
+    pokemons: PokemonDetail[];
     viewDetail: Detail;
     setDetail: React.Dispatch<React.SetStateAction<Detail>>;
 }
