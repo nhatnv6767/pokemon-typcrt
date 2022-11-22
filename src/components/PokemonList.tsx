@@ -2,6 +2,10 @@ import React from 'react';
 import "./pokemon.css"
 
 interface Props {
+    abilities: {
+        name: string;
+        ability: string;
+    }[]
     name: string,
     id: number,
     image: string,
