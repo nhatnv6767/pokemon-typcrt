@@ -7,7 +7,7 @@ export interface Pokemon {
 }
 
 export interface PokemonDetail extends Pokemon {
-    abilities: {
+    abilities?: {
         ability: string,
         name: string,
     }
