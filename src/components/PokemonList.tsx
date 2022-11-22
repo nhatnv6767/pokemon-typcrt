@@ -5,7 +5,7 @@ interface Props {
     abilities: {
         name: string;
         ability: string;
-    }[]
+    }[] | undefined,
     name: string,
     id: number,
     image: string,
