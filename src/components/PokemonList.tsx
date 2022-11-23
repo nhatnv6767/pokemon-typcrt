@@ -29,7 +29,18 @@ const PokemonList: React.FC<Props> = (props) => {
                             X
                         </p>
                         <div className="detail-info">
-                            <img src={image} alt=""/>
+                            <img src={image} alt="" className="detail-img"/>
+                            <p className="detail-name">{name}</p>
+                        </div>
+                        <div className="detail-skill">
+                            <p className="detail-ability">
+                                Abilities:
+                            </p>
+                            {abilities?.map((ab: any) => {
+                                return (
+                                    <div> {ab.ability.name}</div>
+                                )
+                            })}
                         </div>
                     </div>
                 </section>
@@ -39,11 +50,7 @@ const PokemonList: React.FC<Props> = (props) => {
                 <img src={image} alt="pokemon"/>
                 <div className="detail-skill">
                     <p className="detail-ability"> Abilities:</p>
-                    {abilities?.map((ab: any) => {
-                        return (
-                            <div> {ab.ability.name}</div>
-                        )
-                    })}
+
                 </div>
             </section>
         </div>
