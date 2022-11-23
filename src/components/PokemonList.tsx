@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./pokemon.css"
 import {Detail} from "../App";
 
@@ -15,7 +15,8 @@ interface Props {
 }
 
 const PokemonList: React.FC<Props> = (props) => {
-    const {name, id, image, abilities} = props;
+    const {name, id, image, abilities, viewDetail, setDetail} = props;
+    const [isSelected, setSelected] = useState(false)
     return (
         <div>
             <section className="pokemon-list-container">
