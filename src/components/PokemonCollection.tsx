@@ -22,6 +22,8 @@ const PokemonCollection: React.FC<Props> = (props) => {
                     return (
                         <div onClick={() => selectPokemon(pokemon.id)}>
                             <PokemonList
+                                viewDetail={viewDetail}
+                                setDetail={setDetail}
                                 key={pokemon.id}
                                 name={pokemon.name}
                                 id={pokemon.id}
