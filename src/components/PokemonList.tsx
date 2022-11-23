@@ -20,7 +20,7 @@ const PokemonList: React.FC<Props> = (props) => {
                 <img src={image} alt="pokemon"/>
                 <div className="detail-skill">
                     <p className="detail-ability"> Abilities:</p>
-                    {abilities?.map((ab) => {
+                    {abilities?.map((ab: any) => {
                         return (
                             <div> {ab.ability.name}</div>
                         )
