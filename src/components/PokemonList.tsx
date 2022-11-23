@@ -22,6 +22,18 @@ const PokemonList: React.FC<Props> = (props) => {
     }, [viewDetail])
     return (
         <div>
+            {isSelected ? (
+                <section className="pokemon-list-detailed">
+                    <div className="detail-container">
+                        <p className="detail-close">
+                            X
+                        </p>
+                        <div className="detail-info">
+                            <img src={image} alt=""/>
+                        </div>
+                    </div>
+                </section>
+            ): ()}
             <section className="pokemon-list-container">
                 <p className="pokemon-name"> {name} </p>
                 <img src={image} alt="pokemon"/>
