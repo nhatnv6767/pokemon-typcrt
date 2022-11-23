@@ -1,7 +1,10 @@
 import React from 'react';
 import "./pokemon.css"
+import {Detail} from "../App";
 
 interface Props {
+    viewDetail: Detail;
+    setDetail: React.Dispatch<React.SetStateAction<Detail>>;
     abilities: {
         name: string;
         ability: string;
