@@ -21,6 +21,15 @@ const PokemonCollection: React.FC<Props> = (props) => {
     return (
         <div>
             <section className={viewDetail.isOpened ? "collection-container-active" : "collection-container"}>
+                {viewDetail.isOpened ? (
+                    <div className="overlay">
+
+                    </div>
+                ) : (
+                    <div>
+                        
+                    </div>
+                )}
                 {pokemons.map((pokemon) => {
                     return (
                         <div onClick={() => selectPokemon(pokemon.id)}>
