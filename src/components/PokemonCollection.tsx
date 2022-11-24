@@ -20,7 +20,7 @@ const PokemonCollection: React.FC<Props> = (props) => {
     }
     return (
         <div>
-            <section className="collection-container">
+            <section className={viewDetail.isOpened ? "collection-container-active" : "collection-container"}>
                 {pokemons.map((pokemon) => {
                     return (
                         <div onClick={() => selectPokemon(pokemon.id)}>
