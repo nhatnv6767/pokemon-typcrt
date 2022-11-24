@@ -20,12 +20,18 @@ const PokemonList: React.FC<Props> = (props) => {
     useEffect(() => {
         setSelected((id === viewDetail?.id))
     }, [viewDetail])
+    const closeDetail = () => {
+        setDetail({
+            id: 0,
+            isOpened: false,
+        })
+    }
     return (
         <div>
             {isSelected ? (
                 <section className="pokemon-list-detailed">
                     <div className="detail-container">
-                        <p className="detail-close">
+                        <p className="detail-close" onClick={closeDetail}>
                             X
                         </p>
                         <div className="detail-info">
