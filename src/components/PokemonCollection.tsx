@@ -13,10 +13,13 @@ interface Props {
 const PokemonCollection: React.FC<Props> = (props) => {
     const {pokemons, viewDetail, setDetail} = props;
     const selectPokemon = (id: number) => {
-        setDetail({
-            id: id,
-            isOpened: true
-        })
+        if (!viewDetail.isOpened) {
+            setDetail({
+                id: id,
+                isOpened: true
+            })
+        }
+
     }
     return (
         <div>
@@ -27,7 +30,7 @@ const PokemonCollection: React.FC<Props> = (props) => {
                     </div>
                 ) : (
                     <div>
-                        
+
                     </div>
                 )}
                 {pokemons.map((pokemon) => {
